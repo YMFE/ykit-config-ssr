@@ -1,0 +1,20 @@
+{
+  "name": "ykit-config-ssr",
+  "version": "0.0.2",
+  "description": "ykit + react + react-router-v4 + ssr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YMFE/ykit-config-ssr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YMFE/ykit-config-ssr/issues"
+  },
+  "homepage": "https://github.com/YMFE/ykit-config-ssr#readme",
+  "dependencies": {}
+}
