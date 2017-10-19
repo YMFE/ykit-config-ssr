@@ -4,7 +4,7 @@
   "description": "ykit + react + react-router-v4 + ssr",
   "main": "index.js",
   "scripts": {
-    "postinstall" : "node ./scripts/install.js",
+    "postinstall": "node ./scripts/install.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +28,9 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "chokidar": "^1.7.0",
+    "colors": "^1.1.2",
     "escape-regexp": "0.0.1",
+    "fs-extra": "^4.0.1",
     "jsdom": "^11.3.0",
     "koa": "^2.3.0",
     "koa-logger": "^3.1.0",
@@ -37,7 +39,6 @@
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "fs-extra": "^4.0.1",
     "simple-git": "^1.77.0"
   }
 }

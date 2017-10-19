@@ -11,7 +11,7 @@ module.exports = {
             const webpack = this.webpack;
             config.context = path.join(appRoot, 'ssr/client');
             config.entry = './index.js';
-            config.output.local = {
+            config.output.local = config.output.prd = {
                 path: path.join(appRoot, 'dist'),
                 filename: 'index.js',
                 publicPath: '//q.qunarzz.com/dist/'

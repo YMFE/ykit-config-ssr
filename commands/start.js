@@ -4,14 +4,23 @@ var path = require('path');
 var child_process = require('child_process');
 const appRoot = __dirname.split('node_modules')[0];
 
-exports.usage = '启动';
+exports.usage = '启动项目';
 
 exports.setOptions = function(optimist) {
-    // 如果需要支持命令参数，写成如下形式
-    // optimist.alias('f', 'foobar');
-    // optimist.describe('f', '<配置项描述>');
+    optimist.alias('p', 'port');
+    optimist.describe('p', '服务端口');
+    optimist.alias('prod', 'prod');
+    optimist.describe('prod', '生产环境启动');
 };
 
 exports.run = function(options) {
-    require(path.join(appRoot, 'ssr/bin/start'))
+    var port = options.p || options.port || 3000,
+        isProduction = options.prod ? options.prod : false
+
+    global.__YKIT__START__PARAMS__ = {
+        port,
+        isProduction
+    }
+
+    var start = require(path.join(appRoot, 'ssr/bin/start'));
 };
