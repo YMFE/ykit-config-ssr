@@ -20,18 +20,7 @@ module.exports = {
                 {
                     test: /\.js$/,
                     loader: require.resolve('babel-loader'),
-                    exclude: [/node_modules/],
-                    query: {
-                        presets: [
-                            'es2015', 'stage-0', 'react'
-                        ],
-                        plugins: [
-                            ['transform-runtime', {
-                                polyfill: true,
-                                regenerator: true
-                            }]
-                        ]
-                    }
+                    exclude: [/node_modules/]
                 }
             );
             config.plugins.push(
