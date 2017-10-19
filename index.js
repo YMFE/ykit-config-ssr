@@ -9,11 +9,12 @@ module.exports = {
         // 更改 Webpack 配置
         modifyWebpackConfig: function(config) {
             const webpack = this.webpack;
-            config.context = path.join(appRoot, 'ssr/client'),
-            config.output.local = config.output.prd = {
+            config.context = path.join(appRoot, 'ssr/client');
+            config.entry = './index.js';
+            config.output.local = {
                 path: path.join(appRoot, 'dist'),
                 filename: 'index.js',
-                publicPath: '/dist/'
+                publicPath: '//q.qunarzz.com/dist/'
             };
             config.module.loaders.push(
                 {
@@ -39,8 +40,18 @@ module.exports = {
                         BROWSER: JSON.stringify(true)
                     }
                 })
-            )
+            );
             return config;
         }
-    }
+    },
+    commands: [
+        {
+            name: 'start',
+            module: require('./commands/start.js')
+        },
+        {
+            name: 'setup',
+            module: require('./commands/setup.js')
+        }
+    ]
 }
