@@ -1,6 +1,6 @@
 {
   "name": "ykit-config-ssr",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "ykit + react + react-router-v4 + ssr",
   "main": "index.js",
   "scripts": {
