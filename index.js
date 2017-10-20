@@ -9,11 +9,13 @@ module.exports = {
         // 更改 Webpack 配置
         modifyWebpackConfig: function(config) {
             const webpack = this.webpack;
-            config.context = path.join(appRoot, 'ssr/client');
-            config.entry = './index.js';
+            config.context = path.join(appRoot, 'src');
+            config.entry = {
+                'bundle.js': ['../ssr/client/index.js']
+            };
             config.output.local = config.output.prd = {
                 path: path.join(appRoot, 'dist'),
-                filename: 'index.js',
+                filename: '[name][ext]',
                 publicPath: '//q.qunarzz.com/dist/'
             };
             config.module.loaders.push(
