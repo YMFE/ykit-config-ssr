@@ -1,6 +1,6 @@
 {
   "name": "ykit-config-ssr",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "ykit + react + react-router-v4 + ssr",
   "main": "index.js",
   "scripts": {
@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/YMFE/ykit-config-ssr#readme",
   "dependencies": {
+    "aphrodite": "^1.2.5",
     "axios": "^0.16.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^6.4.1",
     "babel-plugin-dynamic-import-node": "^1.1.0",
+    "babel-plugin-module-alias": "^1.6.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
