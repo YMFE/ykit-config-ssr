@@ -18,7 +18,7 @@ module.exports = {
             };
             config.module.loaders.push(
                 {
-                    test: /\.js$/,
+                    test: /\.(js|jsx)$/,
                     loader: require.resolve('babel-loader'),
                     exclude: [/node_modules/]
                 }
@@ -30,6 +30,9 @@ module.exports = {
                     }
                 })
             );
+            if(config.resolve.extensions.indexOf('.jsx') === -1) {
+                config.resolve.extensions.push('.jsx');
+            }
             return config;
         }
     },
