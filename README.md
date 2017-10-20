@@ -1,4 +1,4 @@
-# isomorphic-seperate-demo
+# ykit-config-ssr
 
 ykit + react(16) + react-router(v4) ssr 插件
 
