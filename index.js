@@ -35,7 +35,8 @@ module.exports = {
             config.plugins.push(
                 new webpack.DefinePlugin({
                     "process.env": {
-                        BROWSER: JSON.stringify(true)
+                        BROWSER: JSON.stringify(true),
+                        NODE_ENV: JSON.stringify(this.env === 'prd' ? 'production' : 'development')
                     }
                 })
             );
