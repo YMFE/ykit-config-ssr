@@ -13,9 +13,16 @@ module.exports = {
             config.entry = {
                 'bundle.js': ['../ssr/client/index.js']
             };
-            config.output.local = config.output.prd = {
+            config.output.local = {
                 path: path.join(appRoot, 'dist'),
                 filename: '[name][ext]',
+                chunkFilename: '[name]-chunk[ext]',
+                publicPath: '//q.qunarzz.com/dist/'
+            };
+            config.output.prd = {
+                path: path.join(appRoot, 'dist'),
+                filename: '[name]@[chunkhash][ext]',
+                chunkFilename: '[name]-chunk@[chunkhash][ext]',
                 publicPath: '//q.qunarzz.com/dist/'
             };
             config.module.loaders.push(
