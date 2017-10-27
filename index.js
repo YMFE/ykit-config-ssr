@@ -17,13 +17,13 @@ module.exports = {
                 path: path.join(appRoot, 'dist'),
                 filename: '[name][ext]',
                 chunkFilename: '[name]-chunk[ext]',
-                publicPath: '//q.qunarzz.com/dist/'
+                publicPath: '/dist/'
             };
             config.output.prd = {
                 path: path.join(appRoot, 'dist'),
                 filename: '[name]@[chunkhash][ext]',
                 chunkFilename: '[name]-chunk@[chunkhash][ext]',
-                publicPath: '//q.qunarzz.com/dist/'
+                publicPath: '/dist/'
             };
             config.module.loaders.push(
                 {
