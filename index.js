@@ -16,8 +16,7 @@ module.exports = {
             config.output.local = {
                 path: path.join(appRoot, 'dist'),
                 filename: '[name][ext]',
-                chunkFilename: '[name]-chunk[ext]',
-                publicPath: '/dist/'
+                chunkFilename: '[name]-chunk[ext]'
             };
             config.output.prd = {
                 path: path.join(appRoot, 'dist'),
